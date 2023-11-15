@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0,
+      width=device-width,
+      height=device-height"
+      user-scalable="no"
+      shrink-to-fit="no"
+    />
+    <title>Simple Javascript Calculator</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="toggle-container">
+      <label class="toggle-switch">
+        <input type="checkbox" id="toggle-mode" />
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+    <div class="container">
+      <h1 style="color: rgb(115, 126, 18)" margin-left: 1.25rem;>
+        <strong>CALCULATOR</strong>
+      </h1>
+
+      <div class="calculator" id="calc">
+        <input type="screen" id="answer" readonly />
+        <table>
+          <tr>
+            <td><button data-operation="sin">sin</button></td>
+            <td><button data-operation="cos">cos</button></td>
+            <td><button data-operation="tan">tan</button></td>
+            <td><button>(</button></td>
+            <td><button>)</button></td>
+            <td>
+              <div class="row">
+                <div class="col">
+                  <button
+                    data-operation="clear"
+                    style="
+                      background-color: red;
+                      font-weight: bold;
+                      color: #fff;
+                      width: 6vw;
+                    "
+                  >
+                    C
+                  </button>
+                </div>
+                <div class="col">
+                  <button
+                    data-operation="CE"
+                    style="
+                      background-color: red;
+                      color: #fff;
+                      width: 6vw;
+                      font-weight: bold;
+                    "
+                  >
+                    CE
+                  </button>
+                </div>
+              </div>
+            </td>
+            <td><button data-operation="%">%</button></td>
+          </tr>
+          <tr>
+            <td><button data-operation="sin⁻¹">sin⁻¹</button></td>
+            <td><button data-operation="cos⁻¹">cos⁻¹</button></td>
+            <td><button data-operation="tan⁻¹">tan⁻¹</button></td>
+            <td><button value="7" data-operation="digit">7</button></td>
+            <td><button value="8" data-operation="digit">8</button></td>
+            <td><button value="9" data-operation="digit">9</button></td>
+            <td><button value="*" class="operator">*</button></td>
+          </tr>
+          <tr>
+            <td><button data-operation="sinh">sinh</button></td>
+            <td><button data-operation="cosh">cosh</button></td>
+            <td><button data-operation="tanh">tanh</button></td>
+            <td><button value="4" data-operation="digit">4</button></td>
+            <td><button value="5" data-operation="digit">5</button></td>
+            <td><button value="6" data-operation="digit">6</button></td>
+            <td><button value="-" class="operator">-</button></td>
+          </tr>
+          <tr>
+            <td><button data-operation="sinh⁻¹">sinh⁻¹</button></td>
+            <td><button data-operation="cosh⁻¹">cosh⁻¹</button></td>
+            <td><button data-operation="tanh⁻¹">tanh⁻¹</button></td>
+            <td><button value="1" data-operation="digit">1</button></td>
+            <td><button value="2" data-operation="digit">2</button></td>
+            <td><button value="3" data-operation="digit">3</button></td>
+            <td>
+              <button value="+" class="operator" data-operation="add">+</button>
+            </td>
+          </tr>
+          <tr>
+            <td><button data-operation="xⁿ">xⁿ</button></td>
+            <td><button data-operation="sqrt">√</button></td>
+            <td><button data-operation="cbrt">∛</button></td>
+            <td><button value="0" data-operation="digit">0</button></td>
+            <td><button style="font-weight: bold">.</button></td>
+            <td>
+              <button value="&sol;" class="operator" data-operation="div">
+                /
+              </button>
+            </td>
+            <td>
+              <button
+                data-operation="equals"
+                style="
+                  background-color: #25db72;
+                  font-weight: bold;
+                  color: #ecf0f1;
+                "
+                value="="
+                id="equals"
+                class="operator"
+              >
+                =
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="./calculator.js"></script>
+  <script></script>
+</html>
